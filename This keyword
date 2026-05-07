@@ -1,0 +1,20 @@
+# include <iostream>
+using namespace std;
+
+class Rectangle{
+    public:
+    int length;
+    int width;
+    
+    Rectangle(int length,int width){
+        this->length=length;
+        this->width=width;
+    }
+    void Area(){
+        cout<<"Area of rectangle is "<<length*width<<endl;
+    }
+};
+int main(){
+    Rectangle r1(10,5);
+    r1.Area();
+}
