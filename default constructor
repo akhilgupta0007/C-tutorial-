@@ -1,0 +1,20 @@
+# include <iostream>
+using namespace std;
+
+class Square{
+    public:
+    int length;
+    
+    Square(){
+        
+    }
+    void area(){
+        cout<<"area of square is "<<length*length<<endl;
+    }
+};
+int main(){
+    Square s;
+    s.length=5;
+    s.area();
+    
+}
