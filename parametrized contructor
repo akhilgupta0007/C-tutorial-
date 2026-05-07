@@ -1,0 +1,22 @@
+# include <iostream>
+using namespace std;
+
+class Vehicle{
+    public:
+    string name;
+    int price;
+    //parametrized constructor
+    Vehicle(string n,int p){
+        name=n;
+        price=p;
+    }
+    void display(){
+        cout<<name<<" "<<price<<endl;
+    }
+};
+int main(){
+    Vehicle v1("car",500000);
+    v1.display();
+    
+     return 0;
+}
