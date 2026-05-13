@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+class Vehicle{
+    public:
+    int wheeler;
+};
+class Fourwheeler:public Vehicle{
+    public:
+    string name;
+};
+class Car:public Fourwheeler{
+    public:
+    int speed;
+};
+int main(){
+    Car c1;
+    c1.wheeler=4;
+    c1.name="scorpio";
+    c1.speed=120;
+    
+    cout<<c1.wheeler<<" wheeler,"<<" "<<c1.name<<", "<<c1.speed<<endl;
+}
