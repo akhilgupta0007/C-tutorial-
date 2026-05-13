@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+class Vehicle{
+    public:
+    
+    string name;
+    int price;
+    
+    Vehicle(string n,int p){
+        name=n;
+        price=p;
+    }
+    void display(){
+        cout<<"name :"<<name<<"   price :"<<price<<endl;
+    }
+};
+int main(){
+    Vehicle v1("nano",250000);
+    v1.display();
+    Vehicle v2("verna",870000);
+    v2.display();
+    Vehicle v3=v1;
+    v3.display();
+}
