@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+class Car{
+    public:
+    string name;
+    int seater;
+};
+
+class Bike{
+    public:
+    int speed;
+    int price;
+};
+
+class Vehicle:public Car,public Bike{
+    public:
+    void display(){
+        cout<<" source of energy is fuel"<<endl;
+    }
+};
+
+int main(){
+    Vehicle v1;
+    v1.name="nano";
+    v1.seater=5;
+    cout<<v1.name<<" "<<v1.seater  ;
+    v1.display();
+    
+    Vehicle v2;
+    v2.speed=150;
+    v2.price=155000;
+    cout<<v2.price<<" "<<v2.speed;
+    v2.display();
+    return 0;
+}
