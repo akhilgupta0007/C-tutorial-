@@ -1,0 +1,52 @@
+#include <iostream>
+using namespace std;
+
+//Encapsulation
+class Person{
+    public:
+    string name;
+    private:
+    float salary;
+    protected:
+    int bankbalance;
+    
+    public:
+    void setsalary(float s){
+        salary=s;
+    }
+    void getsalary(){
+        cout<<"salary :"<<salary<<endl;
+    }
+    
+    void setbankbalance(int bb){
+        bankbalance =bb;
+    }
+    void getbankbalance (){
+        cout<<"bankbalance :"<<bankbalance<<endl;
+    }
+};
+class Employee:public Person{
+    public:
+    void add_interest(){
+        bankbalance=bankbalance+((bankbalance*10)/100);
+    }
+};
+ int main(){
+     Person p;
+     p.name="Akhil";
+     cout<<"name :"<<p.name<<endl;
+     
+     p.setsalary(22000);;
+     p.getsalary();
+     
+     Employee e;
+     
+     e.setbankbalance(1200000);
+     e.getbankbalance();
+     
+     cout<<"bankbalance with interest :";
+     e.add_interest();
+     e.getbankbalance();
+     
+     return 0;
+ }
