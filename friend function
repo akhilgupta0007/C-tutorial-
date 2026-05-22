@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std;
+
+class Employee {
+public:
+    string name;
+    int age;
+
+private:
+    int salary;
+
+public:
+    Employee(string n, int a, int s) {
+        name = n;
+        age = a;
+        salary = s;
+    }
+
+    void display() {
+        cout << name ;
+        cout << age <<" ";
+        cout << salary << endl;
+    }
+
+    // Friend functions declaration
+    friend void displayName(Employee e);
+    friend void displaySalary(Employee e);
+};
+
+// Friend function definitions
+void displayName(Employee obj) {
+    cout << obj.name << endl;
+}
+
+void displaySalary(Employee obj) {
+    cout << obj.salary << endl;
+}
+
+int main() {
+    Employee e1("san ", 20 , 25000);
+    e1.display();
+
+    Employee e2("akhil ", 18, 20000);
+    e2.display();
+    
+    displayName(e2);
+    displaySalary(e1);
+
+    return 0;
+}
