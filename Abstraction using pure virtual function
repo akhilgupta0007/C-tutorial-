@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+//Abstraction
+class Account{
+    public:
+    virtual void add_interest()=0;
+    virtual void withdraw()=0;
+};
+class savingaccount:public Account{
+    public:
+    void add_interest(){
+        cout<<"interest is added by 4%"<<endl;
+    }
+    void withdraw(){
+        cout<<"amount is withdrawn from saving account"<<endl;
+    }
+};
+class FDaccount:public Account{
+    public:
+    void add_interest(){
+        cout<<"interest is added by 8%"<<endl; 
+    }
+    void withdraw(){
+        cout<<"can't withdrawn from fixed deposit "<<endl;
+    }
+};
+int main(){
+    cout<<"Saving Account :"<<endl;
+    
+    savingaccount s;
+    s.withdraw();
+    s.add_interest();
+    
+    cout<<"FD account :"<<endl;
+    
+    FDaccount fda;
+    fda.withdraw();
+    fda.add_interest();
+}
