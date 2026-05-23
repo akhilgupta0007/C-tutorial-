@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+class Payment {
+    public :
+    
+    //using virtual function
+    virtual void pay(){
+        cout<<"payment done by parent class"<<endl;
+    }
+};
+class Creditcard:public Payment{
+    public:
+    void pay (){
+        cout<<"payment done by creditcard"<<endl;
+    }
+};
+int main(){
+    
+    Payment p;
+    p.pay();
+    
+    Creditcard cd;
+    cd.pay();
+    
+    cout<<"derived class is inherited by virtual function :"<<endl;
+    
+    Creditcard cd2;
+    Payment*ptr;
+    ptr=&cd2;
+    ptr->pay();
+}
